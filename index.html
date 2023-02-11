@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>API Data</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>  
+<script src="javascript.js"></script>  
+</head>
+
+<body >
+<div ng-app="myApp" ng-controller="MyController">
+<div ng-repeat="db in data">
+
+<div class="mainDiv">
+<div class="div1">{{db.companyname}}</div>
+
+<div align="center" class="boxdiv" ng-repeat="card in db.employees_details">
+    <table class="tab">
+        <tr>
+            <td align="center">
+                <img src="{{card.photo}}"  />
+            </td>
+        </tr>
+        <tr>
+            <td align="center">{{card.name}}</td>
+        </tr>
+        <tr>
+            <td align="center">{{card.mobileno}}</td>
+        </tr>
+        <tr>
+            <td align="center">{{card.email}}</td>
+        </tr>
+    </table>
+</div>
+</div>
+
+</div>   
+</div>
+
+</body>
+</html>
